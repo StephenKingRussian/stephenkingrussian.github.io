@@ -3,7 +3,6 @@
 <head>
   <meta charset="UTF-8">
   <title>Stephen King Behind the Iron Curtain: The Story of Stephen King's Books in the USSR and Russia (1981–2025)</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
     body {
       margin: 0;
@@ -20,14 +19,15 @@
 
     .container {
       display: flex;
-      flex-direction: row;
     }
 
     nav {
       width: 200px;
       background-color: #333;
       padding-top: 20px;
-      flex-shrink: 0;
+      height: calc(100vh - 250px);
+      position: sticky;
+      top: 0;
     }
 
     nav a {
@@ -61,35 +61,6 @@
       padding: 20px;
       font-size: 0.9em;
       background-color: #ddd;
-    }
-
-    /* Responsive layout */
-    @media (max-width: 768px) {
-      .container {
-        flex-direction: column;
-      }
-
-      nav {
-        width: 100%;
-        display: flex;
-        justify-content: space-around;
-        padding: 10px 0;
-      }
-
-      nav a {
-        padding: 10px;
-        text-align: center;
-        flex-grow: 1;
-        border-right: 1px solid #444;
-      }
-
-      nav a:last-child {
-        border-right: none;
-      }
-
-      main {
-        padding: 15px;
-      }
     }
   </style>
 </head>
