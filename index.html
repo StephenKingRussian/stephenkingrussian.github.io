@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>Stephen King Behind the Iron Curtain: The Story of Stephen King's Books in the USSR and Russia (1981–2025)</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
     body {
       margin: 0;
@@ -19,15 +20,14 @@
 
     .container {
       display: flex;
+      flex-direction: row;
     }
 
     nav {
       width: 200px;
       background-color: #333;
       padding-top: 20px;
-      height: calc(100vh - 250px);
-      position: sticky;
-      top: 0;
+      flex-shrink: 0;
     }
 
     nav a {
@@ -62,6 +62,35 @@
       font-size: 0.9em;
       background-color: #ddd;
     }
+
+    /* Responsive layout */
+    @media (max-width: 768px) {
+      .container {
+        flex-direction: column;
+      }
+
+      nav {
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        padding: 10px 0;
+      }
+
+      nav a {
+        padding: 10px;
+        text-align: center;
+        flex-grow: 1;
+        border-right: 1px solid #444;
+      }
+
+      nav a:last-child {
+        border-right: none;
+      }
+
+      main {
+        padding: 15px;
+      }
+    }
   </style>
 </head>
 <body>
@@ -92,7 +121,7 @@
         <h2>About the Author</h2>
         <p>Yernar Shambayev was born in the former Soviet Union and lives in Kazakhstan — a background that offers him a unique perspective on the cultural and political journey of Stephen King’s work behind the Iron Curtain. He is a writer, literary translator, and English teacher. His translation projects include works by Pulitzer Prize–winning author Donna Tartt.</p>
         <p>A lifelong fan of both literature and cultural history, Shambayev explores the unlikely but fascinating relationship between Russian readers and one of America’s most iconic writers — Stephen King.</p>
-        <p>Stephen King Behind the Iron Curtain is his first nonfiction book released internationally. Blending literary history, Cold War and contemporary politics, deep knowledge of Russian publishing, and personal passion, the book tells a story few knew existed.</p>
+        <p>Stephen King Behind the Iron Curtain is his first nonfiction book released internationally. Blending literary history, Cold War and contemporary politics, deep knowledge of Russian publishing, and personal passion, the book uncovers a story few knew existed.</p>
         <p>Please feel free to contact the author: je.schambajew@gmail.com</p>
       </section>
     </main>
